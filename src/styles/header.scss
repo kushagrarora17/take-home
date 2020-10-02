@@ -1,0 +1,53 @@
+@import './colors';
+
+.header {
+  height: 66px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width : 100%;
+  align-items: center;
+
+  .user-change {
+    background-color: transparent;
+    padding: 8px 6px;
+    font-size: 28px;
+    color: var(--color-text);
+    border: 0;
+    outline: none;
+  }
+
+  .room-name {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--color-heading);
+    flex-grow: 1;
+    text-align: center;
+  }
+
+  .msg-count {
+    display: flex;
+    align-items: center;
+    height: 42px;
+    min-width: 42px;
+    padding: 4px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    font-size: 20px;
+
+    img{
+      width: 32px;
+      height: 32px;
+      margin-left: 4px;
+      filter: var(--color-filter);
+    }
+  }
+
+  .profile-container {
+    height: 52px;
+    width: 52px;
+    flex-shrink: 0;
+    margin-right: 8px;
+    background-color: white;
+  }
+}

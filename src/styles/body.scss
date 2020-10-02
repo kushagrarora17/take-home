@@ -1,0 +1,102 @@
+.body {
+  height: 100%;
+
+  .rooms {
+    height: 100%;
+    overflow: scroll;
+
+    li {
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 24px;
+      transition: background-color 0.4s ease-in;
+
+      &.active {
+        background-color: var(--color-highlight);
+      }
+
+      &:hover {
+        background-color: var(--color-hover);
+      }
+    }
+  }
+
+  .chat {
+    height: 100%;
+    overflow: scroll;
+
+    li {
+      line-height: 1.2;
+      clear: both;
+
+      &:focus {
+        outline: none;
+      }
+
+      article {
+        max-width: 40%;
+        background-color: var(--color-message-rec-bg);
+        border-radius: 8px;
+        padding: 8px;
+        margin-bottom: 16px;
+      }
+
+      button {
+        background-color: transparent;
+        opacity: 0;
+        transition: opacity 0.4s ease-in-out;
+        height: 100%;
+        border: 0;
+        cursor: pointer;
+      }
+
+      &:hover button {
+        opacity: 1;
+      }
+
+      &.self {
+        
+        h3 {
+          display: none;
+        }
+
+        li {
+          text-align: right;
+        }
+
+        article {
+          background-color: var(--color-message-sent-bg);
+        }
+      }
+
+      h3 {
+        color: var(--color-heading);
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 8px;
+      }
+
+      small {
+        font-size: 10px;
+      }
+
+      .profile-container{
+        height: 54px;
+        width: 54px;
+        margin-right: 8px;
+        background-color: white;
+      }
+    }
+    .typing-indicator{
+      position: fixed;
+      z-index: 1;
+      padding: 16px 12px;
+      border: 1px solid $border;
+      right: 16px;
+      background-color: var(--color-page-background);
+    }
+  }
+}
